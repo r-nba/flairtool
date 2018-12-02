@@ -1,0 +1,267 @@
+/* General */
+
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    overflow: hidden;    
+}
+
+.ui-helper-hidden-accessible {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+/* Header nav */
+
+.hdr-container {
+	max-width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+	padding-top: 2rem;
+    padding-left: .4rem;
+    padding-right: .4rem;
+    width: 100%;
+}
+
+.hdr-container a:first-of-type {
+    height: 32px;
+    width: 32px;
+    font-size: 0;
+	border-radius: 50%;
+	background-image:url('/static/img/community_icon.png');
+    background-size: 32px;
+}
+
+/* Main container */
+
+.container { max-width: 75%; padding-top: 2rem; }
+
+/* .btn, a, a:hover { border-color: #ff5212; color: #ff5212; }
+.btn:hover, .btn:focus, .btn:active, .btn.btn-primary:hover { border-color: #ff4500; }
+.btn:hover, .btn:focus { background-color: #fff6e5; }
+.btn:focus { box-shadow: 0 0 0 0.1rem #fff6e5; }
+.btn:active, .btn.btn-primary:hover, .btn.btn-primary:active { background-color: #ff4500; }
+a:visited, .btn.btn-link:hover { color: #ffa500; }
+
+.btn.btn-link {
+    background: 0 0;
+    border-color: transparent;
+    color: #ff5212;
+}
+
+.btn.btn-primary {
+    background: #ff5212;
+    border-color: #ff4500;
+}
+
+.form-radio input:checked+.form-icon { background-color: #ffa500; border-color: #ffa500; }
+
+.form-radio input:focus+.form-icon {
+    box-shadow: none;
+}
+
+------
+
+button            #5755d9
+btn hover bg      #f1f1fc
+    border-color  #4b48d6
+button active     #4b48d6
+button focus bg   #f1f1fc
+    border-color  #4b48d6
+
+------ */
+
+ul {
+	margin: 0 auto; padding: 0;
+	max-width: 640px;
+	font-size: 0;
+}
+
+li {
+	display: inline-block;
+	margin: 0!important; padding: 0;
+	list-style: none;
+}
+
+li a {
+	display: block;
+	width: 40px; height: 40px;
+	padding: 5px;
+}
+
+ul li .flair:before { transition: opacity 300ms ease; }
+ul:hover li .flair:before { opacity: .20; transition: opacity 300ms ease; }
+ul:hover li:hover .flair:before { opacity: 1; transition: opacity 300ms ease; }
+
+.ui-unselected .flair:before { opacity: .20; transition: opacity 300ms ease; }
+.ui-selected .flair:before { opacity: 1; transition: opacity 300ms ease; fill: #ffa500; }
+
+/* Preview box */
+
+#preview {
+	margin-bottom: 17px;
+}
+
+#preview .card-body {
+	text-align: center;
+}
+
+#preview span:before {
+	line-height: 20px;
+}
+
+span { display: inline-block; }
+
+span.flair {
+    position: relative;
+    font-size: 11px!important;
+    margin: 0 4px 0 40px;
+    padding: 0 5px;
+    width: auto;
+    max-width: inherit;
+	height: 22px;
+    background: white;
+    border: 1px solid #E6E6E6;
+    border-radius: 3px;
+    line-height: 20px;
+}
+
+span.flair:before {
+	content: "";
+	position: absolute;
+	top: -5px;
+	left: -36px;
+	float: left;
+	display: inline-block;
+	width: 30px;
+	height: 30px;
+    background-size: 154px 960px;
+}
+
+#submit.btn { margin-right: 5px; }
+
+/* Logos */
+
+#logos { padding: 45px 0; }
+
+/* Player selection */
+
+#player-search {
+	display: flex;
+    flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 250px;
+}
+
+.input-group .form-input { min-width: 250px; }
+.form-radio .form-icon { top: 0.4rem; }
+
+#player-options {
+	margin-top: 17px;
+	max-height: 415px;
+	overflow-y: auto;
+}
+
+#player-options li {
+	display: block;
+	width: 100%;
+}
+
+#player-options a {
+	color: #50596c;
+}
+
+#player-options a:hover {
+	text-decorations: none;
+}
+
+.flair:before {
+	content: "";
+	top: -5px;
+	left: -36px;
+	float: left;
+	display: inline-block;
+	width: 30px;
+	height: 30px;
+	background: url('/static/img/flairs.png') no-repeat 0 0;
+    background-size: 154px 960px;
+}
+
+/* Columns */
+
+*[class^="flair flair"][class$="1"]:before { background-position-x: 0 }
+*[class^="flair flair"][class$="2"]:before { background-position-x: -31px }
+*[class^="flair flair"][class$="3"]:before { background-position-x: -62px }
+*[class^="flair flair"][class$="4"]:before { background-position-x: -93px }
+*[class^="flair flair"][class$="5"]:before { background-position-x: -124px }
+
+/* Rows */
+
+*[class^="flair flair-Hawks"]:before { background-position-y: 0 }
+*[class^="flair flair-Celtics"]:before { background-position-y: -31px }
+*[class^="flair flair-Nets"]:before { background-position-y: -62px }
+*[class^="flair flair-ChaHornets"]:before { background-position-y: -93px }
+*[class^="flair flair-Bulls"]:before { background-position-y: -124px }
+*[class^="flair flair-Cavaliers"]:before { background-position-y: -155px }
+*[class^="flair flair-Mavs"]:before { background-position-y: -186px }
+*[class^="flair flair-Nuggets"]:before { background-position-y: -217px }
+*[class^="flair flair-Pistons"]:before { background-position-y: -248px }
+*[class^="flair flair-Warriors"]:before { background-position-y: -279px }
+*[class^="flair flair-Rockets"]:before { background-position-y: -310px }
+*[class^="flair flair-Pacers"]:before { background-position-y: -341px }
+*[class^="flair flair-Clippers"]:before { background-position-y: -372px }
+*[class^="flair flair-Lakers"]:before { background-position-y: -403px }
+*[class^="flair flair-Grizzlies"]:before { background-position-y: -434px }
+*[class^="flair flair-Heat"]:before { background-position-y: -465px }
+*[class^="flair flair-Bucks"]:before { background-position-y: -496px }
+*[class^="flair flair-Timberwolves"]:before { background-position-y: -527px }
+*[class^="flair flair-Pelicans"]:before { background-position-y: -558px }
+*[class^="flair flair-Knicks"]:before { background-position-y: -589px }
+*[class^="flair flair-Thunder"]:before { background-position-y: -620px }
+*[class^="flair flair-Magic"]:before { background-position-y: -651px }
+*[class^="flair flair-76ers"]:before { background-position-y: -682px }
+*[class^="flair flair-Suns"]:before { background-position-y: -713px }
+*[class^="flair flair-TrailBlazers"]:before { background-position-y: -744px }
+*[class^="flair flair-Kings"]:before { background-position-y: -775px }
+*[class^="flair flair-Spurs"]:before { background-position-y: -806px }
+*[class^="flair flair-Raptors"]:before { background-position-y: -837px }
+*[class^="flair flair-Jazz"]:before { background-position-y: -868px }
+*[class^="flair flair-Wizards"]:before { background-position-y: -899px }
+*[class^="flair flair-SuperSonics"]:before { background-position-y: -930px }
+
+.flair-SanDiegoRockets:before { background-position: -93px -310px!important }
+.flair-Braves:before { background-position: -124px -372px!important }
+.flair-MinnLakers:before { background-position: -62px -403px!important }
+.flair-VanGrizzlies1:before { background-position: -62px -434px!important }
+.flair-VanGrizzlies2:before { background-position: -93px -434px!important }
+
+.flair-NBA:before {background-position: -62px -124px;}
+.flair-West:before {background-position: -93px -124px;}
+.flair-East:before {background-position: -124px -124px;}
+
+.flair-Bulls3:before, .flair-Bulls4:before, .flair-Bulls5:before { background-position: -9999px -9999px!important }
+
+.hidden,
+*[class^="flair flair-Mavs5"],*[class^="flair flair-Warriors5"],*[class^="flair flair-Rockets5"],*[class^="flair flair-Lakers5"],*[class^="flair flair-Grizzlies5"],
+*[class^="flair flair-Thunder4"],*[class^="flair flair-Thunder5"],*[class^="flair flair-Suns5"],*[class^="flair flair-Kings5"],
+*[class^="flair flair-SuperSonics4"],*[class^="flair flair-SuperSonics5"],*[class^="flair flair-Nets4"],*[class^="flair flair-Nets5"],
+*[class^="flair flair-Bulls3"],*[class^="flair flair-Bulls4"],*[class^="flair flair-Bulls5"],*[class^="flair flair-Pistons5"],
+*[class^="flair flair-Pacers4"],*[class^="flair flair-Pacers5"],*[class^="flair flair-Heat4"],*[class^="flair flair-Heat5"],
+*[class^="flair flair-Magic5"] { display: none!important; }
+
+@media screen and (-webkit-max-device-pixel-ratio:1) {
+
+    *[class^="flair flair"]:before {
+        background-image:url('/static/img/flair30.png');
+    }
+}
